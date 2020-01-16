@@ -5,4 +5,4 @@ services:
 before_install:
     - docker build -t dakila/workflow-app -f Dockerfile.dev .
 script:
-    - docker run dakila/workflow-app npm run test -- --coverage
+    - docker run --name workflow-app-prod dakila/workflow-app npm run test
